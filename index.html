@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackerspace.gr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/app.css" />
+  <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="page-header">
+      <div class="col-md-5">
+        <img alt="logo" src="/img/hackerspace.svg" width="264" height="60">
+      </div>
+      <div class="about col-md-7">
+        <p>
+          Hackerspace.gr [HSGR] is a physical space dedicated to creative code and hardware hacking, in Athens.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- status, twitter, photos -->
+      <div class="col-md-4">
+        <section>
+          <h3>Status</h3>
+          <p>
+            <span id="counter">0</span> <span id="openornot">hackers and 7 capacitors in space, means that space is now closed!</span>
+          </p>
+        </section>
+
+        <section>
+          <h3>Updates</h3>
+          <p>
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hackerspacegr" data-widget-id="514044315073400833">Tweets by @hackerspacegr</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </p>
+        </section>
+
+        <section>
+          <h3>Photos</h3>
+          <p>
+
+          </p>
+        </section>
+      </div>
+
+      <!-- events, news, donate, join -->
+      <div class="col-md-4">
+        <section>
+          <h3>Events</h3>
+          <p>
+            <div id="events_all">
+              <a target="_blank" href="https://www.hackerspace.gr/wiki/Category:Events">See all events &gt;</a>
+            </div>
+            <div id="events_wrapper" class="twelve columns">
+          <ul id='calendar_current'></ul>
+        </div>
+        <div id="events_wrapper" class="twelve columns">
+          <ul id='calendar'></ul>
+        </div>
+          </p>
+        </section>
+
+        <section>
+          <h3>News</h3>
+          <p id="news"></p>
+        </section>
+
+        <section>
+          <h3>Donate</h3>
+          <p>
+            We're a non-profit and we depend on donations. Please help us preserve the awesomeness by donating <a href="https://www.hackerspace.gr/wiki/Donate" target="_blank">money</a> or <a href="https://www.hackerspace.gr/wiki/Wishlist" target="_blank">equipment</a>.
+          </p>
+        </section>
+
+        <section>
+          <h3>Join</h3>
+          <p>
+            Our members have a hand in the running of the organisation as well as 24/7 access to the space. Join Hackerspace.gr.
+          </p>
+        </section>
+      </div>
+
+      <!-- location, contact, resources -->
+      <div class="col-md-4">
+        <section>
+          <h3>Location</h3>
+          <p>
+            <iframe width='100%' height='300px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/comzeradd.jimaooe5/attribution.html?access_token=pk.eyJ1IjoiY29temVyYWRkIiwiYSI6ImxjQjFHNFUifQ.ohrYy34a8ZIZejrPSMWIww'></iframe>
+          </p>
+        </section>
+
+        <section>
+          <h3>Contact</h3>
+          <p>
+            <span class="fa fa-phone"></span> <a href="tel:302130210437">+30 213 0210 437</a><br>
+            <span class="fa fa-envelope"></span> <a href="https://lists.hackerspace.gr/listinfo/discuss" target="_blank">mailing list</a><br>
+            <hr>
+            <span class="fa fa-twitter"></span> <a href="https://twitter.com/hackerspacegr/" target="_blank">twitter</a><br>
+            <span class="fa fa-facebook"></span> <a href="https://www.facebook.com/hackerspacegr" target="_blank">facebook</a><br>
+            <span class="fa fa-google-plus"></span> <a href="https://plus.google.com/109386037165495650427/" target="_blank">g+</a><br>
+            <span class="fa fa-github"></span> <a href="https://github.com/hsgr" target="_blank">github</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+          <p>
+            wiki, blah
+          </p>
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="/js/ical_parser.js"></script>
+  <script src="/js/FeedEk.js"></script>
+  <script src="/js/app.js"></script>
+
+</body>
+</html>
