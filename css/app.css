@@ -108,9 +108,10 @@ a {
 }
 
 .feedEkList {
-list-style-type: none;
-padding: 0;
-margin-left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+}
 
 .panel-footer {
     margin: auto;
