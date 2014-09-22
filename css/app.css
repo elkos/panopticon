@@ -85,13 +85,17 @@ section {
 }
 
 section > h3 {
-    background-color: #ba0000;
+    background-color: #800;
     color: white;
     padding: 8px 11px 8px 11px;
     font-size: 1.3em;
     font-weight: 700;
     letter-spacing: normal;
     border-bottom: 1px #5a5784;
+}
+
+a {
+    color: #800;
 }
 
 #map {
@@ -101,4 +105,10 @@ section > h3 {
 
 .leaflet-control-attribution {
     display:none;
+}
+
+.feedEkList {
+list-style-type: none;
+padding: 0;
+margin-left: 0;
 }
