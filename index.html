@@ -10,19 +10,26 @@
   <link rel='stylesheet' type="text/css" href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css'>
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <link rel="shortcut icon" href="favicon.ico">
+  <link rel="prefetch" type="application/l10n" href="locales.ini">
 </head>
 <body>
 
   <div class="container">
+
+    <div id="lang">
+      <span id="lang-selection" data-l10n-id="lang-selection"><span class="fa fa-language"></span> </span>
+      <select onchange="document.webL10n.setLanguage(this.value || this.options[this.selectedIndex].text);">
+        <option selected value="en">en</option>
+        <option value="el">el</option>
+      </select>
+    </div>
 
     <div class="page-header">
       <div class="col-md-4">
         <img alt="logo" src="img/hackerspace.svg" width="264" height="60">
       </div>
       <div class="about col-md-8">
-        <p>
-          Hackerspace.gr [HSGR] is a physical space dedicated to creative code and hardware hacking, in Athens.
-        </p>
+        <p data-l10n-id="short-about"></p>
       </div>
     </div>
 
@@ -126,6 +133,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/l10n.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js"></script>
   <script src="jsjquery.zflickrfeed.js"></script>
