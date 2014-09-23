@@ -150,6 +150,25 @@ option {
     padding-left: 10px;
 }
 
+.flickrBody > ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.flickrRow {
+    display: inline;
+    margin-right: 3px;
+    max-width: 100px;
+    padding: 2px;
+}
+
+.flickrimg {
+    width: 30%;
+}
+
 .panel-footer {
     margin: auto;
     text-align: center;

@@ -21,7 +21,7 @@
         var defaults = {
             limit: 10,
             header: true,
-            imagesize: 'small',
+            imagesize: 'square',
             titletag: 'h4',
             title: true,
             date: true,
@@ -99,7 +99,7 @@
             if (options.imagesize == 'thumbnail') src = src.replace('_m', '_t');
             if (options.imagesize == 'medium') src = src.replace('_m', '');
 
-            html += link +'<img src="'+ src +'"></a>';
+            html += link +'<img class="flickrimg" src="'+ src +'"></a>';
 
             // Add title if required
             if (options.title) html += '<'+ options.titletag +'>'+ photo.title +'</'+ options.titletag +'>';

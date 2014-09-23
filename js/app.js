@@ -115,7 +115,8 @@ $(document).ready(function() {
   get_counter();
   get_events();
   get_news();
-
+  get_photos();
+  
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29temVyYWRkIiwiYSI6ImxjQjFHNFUifQ.ohrYy34a8ZIZejrPSMWIww';
   var map = L.mapbox.map('map', 'comzeradd.jimaooe5',{
       zoomControl: false
