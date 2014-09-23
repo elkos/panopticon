@@ -53,9 +53,9 @@ function displayEvents(events, events_current, limit) {
     var li = document.createElement('li');
     li.setAttribute('class', 'event');
     // Add details from cal file.
-    li.innerHTML = '<div class="row"><div class="seven columns"><a class="description" target="_blank" href="'+ events[i].DESCRIPTION + '">' +
-    events[i].SUMMARY + '</a></div><div class="five columns event_date">' + events[i].day + ' ' + events[i].start_day + '/' +
-    events[i].start_month + ' <span class="event_hour">' +events[i].start_time + ' - ' + events[i].end_time + '</span></div></div>';
+    li.innerHTML = '<a target="_blank" href="'+ events[i].URL + '">' +
+    events[i].SUMMARY + '</a><br>&nbsp;&nbsp;' + events[i].day + ', ' + events[i].start_day + '/' +
+    events[i].start_month + ' ' +events[i].start_time + ' - ' + events[i].end_time + '';
     // Add list item to list.
     document.getElementById('calendar').appendChild(li);
   }
@@ -64,9 +64,9 @@ function displayEvents(events, events_current, limit) {
     var li = document.createElement('li');
     li.setAttribute('class', 'event');
     // Add details from cal file.
-    li.innerHTML = '<div class="row"><div class="seven columns"><div class="now_tag">now</div><a class="description" target="_blank" href="'+ events_current[j].DESCRIPTION + '">' +
-    events_current[j].SUMMARY + '</a></div><div class="five columns event_date">' + events_current[j].day + ' ' + events_current[j].start_day + '/' +
-    events_current[j].start_month + ' <span class="event_hour">' +events_current[j].start_time + ' - ' + events_current[j].end_time + '</span></div></div>';
+    li.innerHTML = '<a target="_blank" href="'+ events_current[j].URL + '">' +
+    events_current[j].SUMMARY + '</a><br>&nbsp;&nbsp;' + events_current[j].day + ', ' + events_current[j].start_day + '/' +
+    events_current[j].start_month + ' ' +events_current[j].start_time + ' - ' + events_current[j].end_time + '';
     document.getElementById('calendar_current').appendChild(li);
   }
 }

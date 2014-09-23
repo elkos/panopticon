@@ -107,7 +107,8 @@ a {
     display:none;
 }
 
-.feedEkList {
+.feedEkList,
+.calendar {
     list-style-type: none;
     padding: 0;
     margin-left: 0;
