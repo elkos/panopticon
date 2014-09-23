@@ -74,7 +74,7 @@ function displayEvents(events, events_current, limit) {
 // get upcoming events
 var a, b;
 function get_events() {
-  var ical_url = 'https://www.hackerspace.gr/archive/hsgr.ics';
+  var ical_url = 'https://www.hackerspace.gr/wiki/Special:Ask/-5B-5BCategory:Events-7C-7CMeetings-5D-5D/-3FTitle%3Dsummary/-3FStart-20date%3Dstart/-3FEnd-20date%3Dend/-3FLocation%3Dlocation/-3FEventowner%3Ddescription/format%3D-20icalendar/limit%3D-2050/sort%3D-20Start-20date/order%3Ddesc/searchlabel%3D-20iCal/title%3D-20hsgr/offset%3D0';
   new ical_parser(ical_url, function(cal) {
     a = cal.getFutureEvents();
     b = cal.getCurrentEvents();
@@ -93,8 +93,25 @@ function get_news() {
 };
 
 
+function get_photos() {
+  var flickr_mashup = $('#flickr-mashup');
+  var hashtag = flickr_mashup.data('hashtag');
+  flickr_mashup.flickrfeed('', flickr_mashup.data('hashtag').substr(1), {
+    limit: 20,
+    title: false,
+    date: false,
+    header: false,
+    randomize: true
+  }).bind('loaded', function() {
+    // Check if images exist
+    if ($('.flickrRow').length !== 0) {
+      flickr_mashup.slideDown();
+    }
+  });
+}
+
+
 $(document).ready(function() {
-  //$('#loading').toggle();
   get_counter();
   get_events();
   get_news();
