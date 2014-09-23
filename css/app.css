@@ -114,6 +114,18 @@ a {
     margin-left: 0;
 }
 
+.event {
+    margin-bottom: 15px;
+}
+
+.more {
+    text-align: right;
+}
+
+.itemDate {
+    padding-left: 10px;
+}
+
 .panel-footer {
     margin: auto;
     text-align: center;
