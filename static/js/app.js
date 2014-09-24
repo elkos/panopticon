@@ -52,7 +52,7 @@ function displayEvents(events, events_current, limit) {
     // Add details from cal file.
     li.innerHTML = '<span class="fa fa-calendar"></span> <a target="_blank" href="'+ events[i].URL + '">' +
     events[i].SUMMARY + '</a><br>&nbsp;&nbsp;&nbsp;&nbsp;' + events[i].day + ', ' + events[i].start_day + '.' +
-    events[i].start_month + ' ' +events[i].start_time'';
+    events[i].start_month + ' ' + events[i].start_time + '';
     // Add list item to list.
     document.getElementById('calendar').appendChild(li);
   }
