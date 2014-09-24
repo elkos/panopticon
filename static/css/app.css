@@ -73,6 +73,7 @@ body {
     margin-bottom: 6px;
     line-height: 1.3em;
     font-size: 1.33em;
+    padding-left: 20px;
 }
 
 .page-header {
@@ -120,6 +121,14 @@ option {
     .border-radius(3px);
     .box-shadow(@shadow);
     .transition(all linear .1s);
+}
+
+#open {
+    color: green;
+}
+
+#close {
+    color: green;
 }
 
 #map {

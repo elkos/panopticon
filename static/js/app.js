@@ -27,20 +27,17 @@ function get_counter() {
     ];
     var random_text = Math.floor(Math.random()*skadalia.length);
     if ( isNaN(splitted[0]) ) {
-      $('.counter.panel').attr("id","close");
-      $('#openornot').html('0 hackers and ' + random_no + ' ' + skadalia[random_text] + ' in space, means that space is now closed!');
+      $("#openornot").html('0 hackers and ' + random_no + ' ' + skadalia[random_text] + ' in space, means that space is now closed!');
     } else if (splitted[0] == "0") {
       $('#counter').html(splitted[0]);
-      $('.counter.panel').attr("id","close");
       $('#openornot').html('hackers and ' + random_no + ' ' + skadalia[random_text] + ' in space, means that space is now closed!');
     } else if (splitted[0] == "-1") {
       $('#counter').html("");
-      $('.counter.panel').attr("id","close");
       $('#openornot').html('Cannot determine if the space is open or closed. Please check again later.');
     } else {
       $('#counter').html(splitted[0]);
-      $('.counter.panel').attr("id","open");
-      $('#openornot').html('hackers and ' + random_no + ' ' + skadalia[random_text] + ' in space, means that space is now open!');
+      $("#counter").css("font-weight", "bold");
+      $('#openornot').html('<b>hackers</b> and ' + random_no + ' ' + skadalia[random_text] + ' in space, means that space is now <b>open</b>!');
     }
   });
 };
@@ -83,12 +80,13 @@ function get_events() {
 }
 
 function get_news() {
-  $('#news').FeedEk({
-    FeedUrl : 'https://www.hackerspace.gr/wiki/index.php?title=News&action=feed&feed=rss',
+  $("#news").FeedEk({
+    FeedUrl : "https://www.hackerspace.gr/wiki/index.php?title=News&action=feed&feed=rss",
     MaxCount : 5,
     ShowDesc : false,
-    ShowPubDate:true,
-    TitleLinkTarget:'_blank'
+    ShowPubDate: true,
+    DateFormat: "DD.MM.YYYY",
+    TitleLinkTarget: "_blank"
   });
 };
 
