@@ -1,6 +1,6 @@
 # hackerspace.gr
 
-Source code for the Hackerspace.gr website
+Hackerspace.gr web app
 
 
 ## license
