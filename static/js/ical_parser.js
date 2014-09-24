@@ -121,7 +121,7 @@ function ical_parser(feed_url, callback){
           cur_event.end_day = dt.day;
           cur_event.end_month = dt.month;
           cur_event.end_year = dt.year;
-          cur_event.day = dt.dayname;
+          //cur_event.day = dt.dayname;
         }
         //Convert timestamp
         if(type =='DTSTAMP') val = this.makeDate(val).date;
