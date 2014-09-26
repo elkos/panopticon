@@ -123,6 +123,10 @@ option {
     .transition(all linear .1s);
 }
 
+.modal-body {
+    height: 400px;
+}
+
 #open {
     color: green;
 }
