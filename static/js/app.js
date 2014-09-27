@@ -48,13 +48,22 @@ function displayEvents(events, events_current, limit) {
   for ( var i=0; i<Math.min(limit, events.length); i++) {
     // Create a list item
     var li = document.createElement('li');
+    var eventid = "#EventModal-c" + i;
+    var eventdesc = "#EventDescription-c" + i;
+    var eventtitle = "#EventLabel-c" + i;
+    var eventdate = "#EventDate-c" + i;
+    var eventedit = "#EventEdit-c" + i;
     li.setAttribute('class', 'event');
     // Add details from cal file.
-    li.innerHTML = '<span class="fa fa-calendar"></span> <a target="_blank" href="'+ events[i].URL + '">' +
+    li.innerHTML = '<span class="fa fa-calendar"></span> <a data-toggle="modal" data-target="'+eventid+'" href="#">' +
     events[i].SUMMARY + '</a><br>&nbsp;&nbsp;&nbsp;&nbsp;' + events[i].day + ', ' + events[i].start_day + '.' +
     events[i].start_month + ' ' + events[i].start_time + '';
     // Add list item to list.
     document.getElementById('calendar').appendChild(li);
+    $(eventdesc).html(events[i].DESCRIPTION);
+    $(eventtitle).html(events[i].SUMMARY);
+    $(eventdate).html(events[i].day + ', ' + events[i].start_day + '.' + events[i].start_month + ' ' + events[i].start_time);
+    $(eventedit).attr("href", events[i].URL);
   }
   for ( var j=0; j<Math.min(limit,events.length); j++) {
     // Create a list item
@@ -71,7 +80,7 @@ function displayEvents(events, events_current, limit) {
 // get upcoming events
 var a, b;
 function get_events() {
-  var ical_url = 'https://www.hackerspace.gr/wiki/Special:Ask/-5B-5BCategory:Events-7C-7CMeetings-5D-5D/-3FTitle%3Dsummary/-3FStart-20date%3Dstart/-3FEnd-20date%3Dend/-3FLocation%3Dlocation/-3FEventowner%3Ddescription/format%3D-20icalendar/limit%3D-2050/sort%3D-20Start-20date/order%3Ddesc/searchlabel%3D-20iCal/title%3D-20hsgr/offset%3D0';
+  var ical_url = 'https://www.hackerspace.gr/wiki/Special:Ask/-5B-5BCategory:Events-7C-7CMeetings-5D-5D/-3FTitle%3Dsummary/-3FStart-20date%3Dstart/-3FEnd-20date%3Dend/-3FLocation%3Dlocation/-3Ftagline%3Ddescription/format%3D-20icalendar/limit%3D-2050/sort%3D-20Start-20date/order%3Ddesc/searchlabel%3D-20iCal/title%3D-20hsgr/offset%3D0';
   new ical_parser(ical_url, function(cal) {
     a = cal.getFutureEvents();
     b = cal.getCurrentEvents();
@@ -114,7 +123,7 @@ $(document).ready(function() {
   get_events();
   get_news();
   get_photos();
-  
+
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29temVyYWRkIiwiYSI6ImxjQjFHNFUifQ.ohrYy34a8ZIZejrPSMWIww';
   var map = L.mapbox.map('map', 'comzeradd.jimaooe5',{
       zoomControl: false

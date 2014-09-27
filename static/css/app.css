@@ -155,6 +155,14 @@ option {
     margin-bottom: 15px;
 }
 
+.EventDescription {
+    font-size: 1.2em;
+}
+
+.EventDate {
+    font-size: 0.9em;
+}
+
 .more {
     text-align: right;
 }
