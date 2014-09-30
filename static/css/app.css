@@ -127,6 +127,10 @@ option {
     height: 400px;
 }
 
+.membership-notice {
+    padding-bottom: 10px;
+}
+
 #open {
     color: green;
 }

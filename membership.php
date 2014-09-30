@@ -17,8 +17,10 @@
         document.write('<span style="font-weight:bold;">Join Hackerspace.gr</span></div>');
     }
 </script>
-<div>If you haven't done already, pay your first <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SU9M26K3ALNV8" target="_blank">3-month subscription</a>
+<div class="pay-notice">
+  If you haven't done already, pay your first <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SU9M26K3ALNV8" target="_blank">3-month subscription</a>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+</div>
 <?php
 
     require_once('recaptchalib.php');
@@ -60,10 +62,12 @@
 ?>
 <div><?php echo $errormsg; ?></div>
 <div class="form-group has-error">
-  <input type="text" class="form-control" name="name" placeholder="Name" required>
+  <label for="Name">Name</label>
+  <input type="text" class="form-control" name="name" required>
 </div>
 <div class="form-group has-error">
-  <input type="email" class="form-control" name="email" placeholder="Email" required>
+  <label for="Email">Email</label>
+  <input type="email" class="form-control" name="email" required>
 </div>
 <div class="checkbox">
   <label>
@@ -81,10 +85,15 @@
 <hr>
 <div class="form-group">
   <label for="address">Shipping Address<br><small>in case you want your hackerspace passport :)</small></label>
+  <label for="Recipient">Recipient</label>
   <input type="text" class="form-control" name="addrrec" placeholder="Recipient">
+  <label for="Street">Street</label>
   <input type="text" class="form-control" name="addrstreet" placeholder="Street">
+  <label for="P.O.">P.O.</label>
   <input type="text" class="form-control" name="addrpo" placeholder="P.O.">
+  <label for="City">City</label>
   <input type="text" class="form-control" name="addrcity" placeholder="City">
+  <label for="Country">Country</label>
   <input type="text" class="form-control" name="addrcountry" placeholder="Country">
 </div>
 <button type="submit" class="btn btn-primary">Send</button>
