@@ -19,8 +19,8 @@
 </script>
 <div class="membership-notice">
   If you haven't done already, pay your first <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SU9M26K3ALNV8" target="_blank">3-month subscription</a>
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 </div>
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 <?php
 
     require_once('recaptchalib.php');
@@ -46,7 +46,7 @@
         $addrcity = htmlspecialchars(stripslashes(trim($_POST['addrcity'])));
         $addrcountry = htmlspecialchars(stripslashes(trim($_POST['addrcountry'])));
 
-        if ( $resp->is_valid && (strlen($name) != 0)) {
+        if ( $resp->is_valid && (strlen($name) != 0) && (strlen($email) != 0)) {
             $text = "name: ".$name."\nemail: ".$email."\nmemberspage: ".$memberspage."\nmemberslist: ".$memberslist."\n\n";
             $text = $text."recipient: ".$addrrec."\nstreet: ".$addrstreet."\npo: ".$addrpo."\ncity: ".$addrcity."\ncountry: ".$addrcountry;
             mail($mailto,"[hsgr] Membership request","$text","From: hsgrbot <noreply@hackerspace.gr>");
