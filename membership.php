@@ -17,7 +17,7 @@
         document.write('<span style="font-weight:bold;">Join Hackerspace.gr</span></div>');
     }
 </script>
-<div class="pay-notice">
+<div class="membership-notice">
   If you haven't done already, pay your first <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SU9M26K3ALNV8" target="_blank">3-month subscription</a>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 </div>
@@ -84,7 +84,7 @@
 ?>
 <hr>
 <div class="form-group">
-  <label for="address">Shipping Address<br><small>in case you want your hackerspace passport :)</small></label>
+  <label for="address">Shipping Address - <small>in case you want your hackerspace passport :)</small></label>
   <label for="Recipient">Recipient</label>
   <input type="text" class="form-control" name="addrrec" placeholder="Recipient">
   <label for="Street">Street</label>
